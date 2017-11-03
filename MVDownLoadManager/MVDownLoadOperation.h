@@ -12,5 +12,4 @@
 
 +(void)cancelRequest:(NSURL *)url delegate:(id<MVDownLoadManagerDelegate>)delegate;
 +(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache delegate:(id<MVDownLoadManagerDelegate>)delegate;
-//+(void)startUrlRequest:(NSURL *)url success:(void (^)(NSData *responseData))success failure:(void(^)(NSError* error))failure  delegate:(id<MVDownLoadManagerDelegate>)delegate;
 @end

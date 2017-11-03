@@ -31,8 +31,8 @@
     self = [super init];
     if (self) {
         operationDic = [[NSMutableDictionary alloc] init];
-        NSUInteger cashSize = 250 * 1024 * 1024;
-        NSUInteger cashDiskSize = 250 * 1024 * 1024;
+        NSUInteger cashSize = 250 * 1024 * 1024; // 500MB
+        NSUInteger cashDiskSize = 250 * 1024 * 1024;// 500MB
         NSURLCache *imageCache = [[NSURLCache alloc] initWithMemoryCapacity:cashSize diskCapacity:cashDiskSize diskPath:@"someCachePath"];
         [NSURLCache setSharedURLCache:imageCache];
     }

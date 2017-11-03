@@ -174,6 +174,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0C55F9081FACDFC200FF2F2B /* Appdelagate */ = {
+			isa = PBXGroup;
+			children = (
+				0C6F926D1FA906B500C82C97 /* AppDelegate.h */,
+				0C6F926E1FA906B500C82C97 /* AppDelegate.m */,
+			);
+			path = Appdelagate;
+			sourceTree = "<group>";
+		};
 		0C6F92611FA906B500C82C97 = {
 			isa = PBXGroup;
 			children = (
@@ -202,10 +211,9 @@
 		0C6F926C1FA906B500C82C97 /* MVImage */ = {
 			isa = PBXGroup;
 			children = (
+				0C55F9081FACDFC200FF2F2B /* Appdelagate */,
 				0C55F8FD1FAC53D400FF2F2B /* ViewController */,
 				0CD576721FAB964E00F82B52 /* CustomClasses */,
-				0C6F926D1FA906B500C82C97 /* AppDelegate.h */,
-				0C6F926E1FA906B500C82C97 /* AppDelegate.m */,
 				0C6F92731FA906B500C82C97 /* Main.storyboard */,
 				0C6F92761FA906B500C82C97 /* Assets.xcassets */,
 				0C6F92781FA906B500C82C97 /* LaunchScreen.storyboard */,

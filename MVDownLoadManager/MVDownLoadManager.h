@@ -21,6 +21,6 @@
 
 +(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache delegate:(id<MVDownLoadManagerDelegate>)delegate;
 +(void)cancelRequest:(NSURL *)url delegate:(id<MVDownLoadManagerDelegate>)delegate;
-+ (int) delegateCountForUrl:(NSURL *)url;
-+ (BOOL) isDownloadingItemWithURL:(NSURL*)url;
++(int) delegateCountForUrl:(NSURL *)url; // Future Scope
++(BOOL) isDownloadingItemWithURL:(NSURL*)url; // Future Scope
 @end
