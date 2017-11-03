@@ -11,12 +11,6 @@
 #import "MVMovieModal.h"
 #define DEFAULT_CELL_SIZE 10
 #define BASE_URL @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=batman&page="
-
-#define URL1 @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=batman&page=2"
-
-#define URL2 @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=batman&page=3"
-
-#define URL3 @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=batman&page=4"
 @interface ViewController (){
     NSMutableArray *arrImageUrl;
     int pageNumber;
