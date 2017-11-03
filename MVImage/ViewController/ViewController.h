@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "MVDownLoadManager.h"
+@interface ViewController : UIViewController<MVDownLoadManagerDelegate>
 
 
 @end

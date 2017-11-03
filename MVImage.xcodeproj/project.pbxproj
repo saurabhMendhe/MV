@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C55F9001FAC72CC00FF2F2B /* MVMovieModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F8FF1FAC72CC00FF2F2B /* MVMovieModal.m */; };
+		0C55F9031FAC978300FF2F2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F9011FAC978300FF2F2B /* ViewController.m */; };
 		0C6F926F1FA906B500C82C97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F926E1FA906B500C82C97 /* AppDelegate.m */; };
-		0C6F92721FA906B500C82C97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F92711FA906B500C82C97 /* ViewController.m */; };
 		0C6F92751FA906B500C82C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6F92731FA906B500C82C97 /* Main.storyboard */; };
 		0C6F92771FA906B500C82C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C6F92761FA906B500C82C97 /* Assets.xcassets */; };
 		0C6F927A1FA906B500C82C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6F92781FA906B500C82C97 /* LaunchScreen.storyboard */; };
 		0C6F927D1FA906B500C82C97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F927C1FA906B500C82C97 /* main.m */; };
 		0C6F92871FA906B500C82C97 /* MVImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F92861FA906B500C82C97 /* MVImageTests.m */; };
 		0C6F92921FA906B500C82C97 /* MVImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F92911FA906B500C82C97 /* MVImageUITests.m */; };
+		0CD576711FAB962C00F82B52 /* MVCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD576701FAB962C00F82B52 /* MVCustomCollectionViewCell.m */; };
+		0CFC10C31FAA47CE00FDB427 /* MVDownLoadManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC10BA1FAA47CD00FDB427 /* MVDownLoadManager.framework */; };
+		0CFC10CA1FAA47CE00FDB427 /* MVDownLoadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC10C91FAA47CE00FDB427 /* MVDownLoadManagerTests.m */; };
+		0CFC10CF1FAA47CE00FDB427 /* MVDownLoadManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC10BA1FAA47CD00FDB427 /* MVDownLoadManager.framework */; };
+		0CFC10D01FAA47CE00FDB427 /* MVDownLoadManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC10BA1FAA47CD00FDB427 /* MVDownLoadManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0CFC10DB1FAA4B6E00FDB427 /* MVDownLoadManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFC10D91FAA4B6E00FDB427 /* MVDownLoadManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CFC10DD1FAA4B8200FDB427 /* MVDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC10DA1FAA4B6E00FDB427 /* MVDownLoadManager.m */; };
+		0CFC10E01FAA4C5700FDB427 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC10DF1FAA4C5700FDB427 /* Foundation.framework */; };
+		0CFC10E21FAA4E4000FDB427 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC10E11FAA4E4000FDB427 /* CoreFoundation.framework */; };
+		0CFC10E41FAA4E4600FDB427 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CFC10E31FAA4E4600FDB427 /* CoreGraphics.framework */; };
+		0CFC10E71FAA56D000FDB427 /* MVDownLoadOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFC10E51FAA56D000FDB427 /* MVDownLoadOperation.h */; };
+		0CFC10E81FAA56D000FDB427 /* MVDownLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC10E61FAA56D000FDB427 /* MVDownLoadOperation.m */; };
+		0CFC10EC1FAB035800FDB427 /* MVDownLoadOperationModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFC10EA1FAB035800FDB427 /* MVDownLoadOperationModel.h */; };
+		0CFC10ED1FAB035800FDB427 /* MVDownLoadOperationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC10EB1FAB035800FDB427 /* MVDownLoadOperationModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +47,51 @@
 			remoteGlobalIDString = 0C6F92691FA906B500C82C97;
 			remoteInfo = MVImage;
 		};
+		0CFC10C41FAA47CE00FDB427 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C6F92621FA906B500C82C97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CFC10B91FAA47CD00FDB427;
+			remoteInfo = MVDownLoadManager;
+		};
+		0CFC10C61FAA47CE00FDB427 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C6F92621FA906B500C82C97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C6F92691FA906B500C82C97;
+			remoteInfo = MVImage;
+		};
+		0CFC10CD1FAA47CE00FDB427 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C6F92621FA906B500C82C97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CFC10B91FAA47CD00FDB427;
+			remoteInfo = MVDownLoadManager;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0CFC10D61FAA47CE00FDB427 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0CFC10D01FAA47CE00FDB427 /* MVDownLoadManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0C55F8FE1FAC72CC00FF2F2B /* MVMovieModal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVMovieModal.h; sourceTree = "<group>"; };
+		0C55F8FF1FAC72CC00FF2F2B /* MVMovieModal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVMovieModal.m; sourceTree = "<group>"; };
+		0C55F9011FAC978300FF2F2B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0C55F9021FAC978300FF2F2B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0C6F926A1FA906B500C82C97 /* MVImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C6F926D1FA906B500C82C97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C6F926E1FA906B500C82C97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0C6F92701FA906B500C82C97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0C6F92711FA906B500C82C97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0C6F92741FA906B500C82C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C6F92761FA906B500C82C97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C6F92791FA906B500C82C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +103,22 @@
 		0C6F928D1FA906B500C82C97 /* MVImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C6F92911FA906B500C82C97 /* MVImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVImageUITests.m; sourceTree = "<group>"; };
 		0C6F92931FA906B500C82C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CD5766F1FAB962C00F82B52 /* MVCustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		0CD576701FAB962C00F82B52 /* MVCustomCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		0CFC10BA1FAA47CD00FDB427 /* MVDownLoadManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MVDownLoadManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFC10BD1FAA47CD00FDB427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CFC10C21FAA47CE00FDB427 /* MVDownLoadManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVDownLoadManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CFC10C91FAA47CE00FDB427 /* MVDownLoadManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVDownLoadManagerTests.m; sourceTree = "<group>"; };
+		0CFC10CB1FAA47CE00FDB427 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CFC10D91FAA4B6E00FDB427 /* MVDownLoadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVDownLoadManager.h; sourceTree = "<group>"; };
+		0CFC10DA1FAA4B6E00FDB427 /* MVDownLoadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVDownLoadManager.m; sourceTree = "<group>"; };
+		0CFC10DF1FAA4C5700FDB427 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CFC10E11FAA4E4000FDB427 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0CFC10E31FAA4E4600FDB427 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0CFC10E51FAA56D000FDB427 /* MVDownLoadOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVDownLoadOperation.h; sourceTree = "<group>"; };
+		0CFC10E61FAA56D000FDB427 /* MVDownLoadOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVDownLoadOperation.m; sourceTree = "<group>"; };
+		0CFC10EA1FAB035800FDB427 /* MVDownLoadOperationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVDownLoadOperationModel.h; sourceTree = "<group>"; };
+		0CFC10EB1FAB035800FDB427 /* MVDownLoadOperationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVDownLoadOperationModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFC10CF1FAA47CE00FDB427 /* MVDownLoadManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,16 +144,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CFC10B61FAA47CD00FDB427 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFC10E41FAA4E4600FDB427 /* CoreGraphics.framework in Frameworks */,
+				0CFC10E21FAA4E4000FDB427 /* CoreFoundation.framework in Frameworks */,
+				0CFC10E01FAA4C5700FDB427 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CFC10BF1FAA47CE00FDB427 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFC10C31FAA47CE00FDB427 /* MVDownLoadManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C55F8FD1FAC53D400FF2F2B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C55F9021FAC978300FF2F2B /* ViewController.h */,
+				0C55F9011FAC978300FF2F2B /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0C6F92611FA906B500C82C97 = {
 			isa = PBXGroup;
 			children = (
 				0C6F926C1FA906B500C82C97 /* MVImage */,
 				0C6F92851FA906B500C82C97 /* MVImageTests */,
 				0C6F92901FA906B500C82C97 /* MVImageUITests */,
+				0CFC10BB1FAA47CD00FDB427 /* MVDownLoadManager */,
+				0CFC10C81FAA47CE00FDB427 /* MVDownLoadManagerTests */,
 				0C6F926B1FA906B500C82C97 /* Products */,
+				0CFC10DE1FAA4C5700FDB427 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +193,8 @@
 				0C6F926A1FA906B500C82C97 /* MVImage.app */,
 				0C6F92821FA906B500C82C97 /* MVImageTests.xctest */,
 				0C6F928D1FA906B500C82C97 /* MVImageUITests.xctest */,
+				0CFC10BA1FAA47CD00FDB427 /* MVDownLoadManager.framework */,
+				0CFC10C21FAA47CE00FDB427 /* MVDownLoadManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,10 +202,10 @@
 		0C6F926C1FA906B500C82C97 /* MVImage */ = {
 			isa = PBXGroup;
 			children = (
+				0C55F8FD1FAC53D400FF2F2B /* ViewController */,
+				0CD576721FAB964E00F82B52 /* CustomClasses */,
 				0C6F926D1FA906B500C82C97 /* AppDelegate.h */,
 				0C6F926E1FA906B500C82C97 /* AppDelegate.m */,
-				0C6F92701FA906B500C82C97 /* ViewController.h */,
-				0C6F92711FA906B500C82C97 /* ViewController.m */,
 				0C6F92731FA906B500C82C97 /* Main.storyboard */,
 				0C6F92761FA906B500C82C97 /* Assets.xcassets */,
 				0C6F92781FA906B500C82C97 /* LaunchScreen.storyboard */,
@@ -132,7 +233,64 @@
 			path = MVImageUITests;
 			sourceTree = "<group>";
 		};
+		0CD576721FAB964E00F82B52 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0CD5766F1FAB962C00F82B52 /* MVCustomCollectionViewCell.h */,
+				0CD576701FAB962C00F82B52 /* MVCustomCollectionViewCell.m */,
+				0C55F8FE1FAC72CC00FF2F2B /* MVMovieModal.h */,
+				0C55F8FF1FAC72CC00FF2F2B /* MVMovieModal.m */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		0CFC10BB1FAA47CD00FDB427 /* MVDownLoadManager */ = {
+			isa = PBXGroup;
+			children = (
+				0CFC10BD1FAA47CD00FDB427 /* Info.plist */,
+				0CFC10D91FAA4B6E00FDB427 /* MVDownLoadManager.h */,
+				0CFC10DA1FAA4B6E00FDB427 /* MVDownLoadManager.m */,
+				0CFC10E51FAA56D000FDB427 /* MVDownLoadOperation.h */,
+				0CFC10E61FAA56D000FDB427 /* MVDownLoadOperation.m */,
+				0CFC10EA1FAB035800FDB427 /* MVDownLoadOperationModel.h */,
+				0CFC10EB1FAB035800FDB427 /* MVDownLoadOperationModel.m */,
+			);
+			path = MVDownLoadManager;
+			sourceTree = "<group>";
+		};
+		0CFC10C81FAA47CE00FDB427 /* MVDownLoadManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CFC10C91FAA47CE00FDB427 /* MVDownLoadManagerTests.m */,
+				0CFC10CB1FAA47CE00FDB427 /* Info.plist */,
+			);
+			path = MVDownLoadManagerTests;
+			sourceTree = "<group>";
+		};
+		0CFC10DE1FAA4C5700FDB427 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CFC10E31FAA4E4600FDB427 /* CoreGraphics.framework */,
+				0CFC10E11FAA4E4000FDB427 /* CoreFoundation.framework */,
+				0CFC10DF1FAA4C5700FDB427 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0CFC10B71FAA47CD00FDB427 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFC10DB1FAA4B6E00FDB427 /* MVDownLoadManager.h in Headers */,
+				0CFC10E71FAA56D000FDB427 /* MVDownLoadOperation.h in Headers */,
+				0CFC10EC1FAB035800FDB427 /* MVDownLoadOperationModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0C6F92691FA906B500C82C97 /* MVImage */ = {
@@ -142,10 +300,12 @@
 				0C6F92661FA906B500C82C97 /* Sources */,
 				0C6F92671FA906B500C82C97 /* Frameworks */,
 				0C6F92681FA906B500C82C97 /* Resources */,
+				0CFC10D61FAA47CE00FDB427 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0CFC10CE1FAA47CE00FDB427 /* PBXTargetDependency */,
 			);
 			name = MVImage;
 			productName = MVImage;
@@ -188,6 +348,43 @@
 			productReference = 0C6F928D1FA906B500C82C97 /* MVImageUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0CFC10B91FAA47CD00FDB427 /* MVDownLoadManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFC10D51FAA47CE00FDB427 /* Build configuration list for PBXNativeTarget "MVDownLoadManager" */;
+			buildPhases = (
+				0CFC10B51FAA47CD00FDB427 /* Sources */,
+				0CFC10B61FAA47CD00FDB427 /* Frameworks */,
+				0CFC10B71FAA47CD00FDB427 /* Headers */,
+				0CFC10B81FAA47CD00FDB427 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVDownLoadManager;
+			productName = MVDownLoadManager;
+			productReference = 0CFC10BA1FAA47CD00FDB427 /* MVDownLoadManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0CFC10C11FAA47CE00FDB427 /* MVDownLoadManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CFC10D71FAA47CE00FDB427 /* Build configuration list for PBXNativeTarget "MVDownLoadManagerTests" */;
+			buildPhases = (
+				0CFC10BE1FAA47CE00FDB427 /* Sources */,
+				0CFC10BF1FAA47CE00FDB427 /* Frameworks */,
+				0CFC10C01FAA47CE00FDB427 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CFC10C51FAA47CE00FDB427 /* PBXTargetDependency */,
+				0CFC10C71FAA47CE00FDB427 /* PBXTargetDependency */,
+			);
+			name = MVDownLoadManagerTests;
+			productName = MVDownLoadManagerTests;
+			productReference = 0CFC10C21FAA47CE00FDB427 /* MVDownLoadManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +408,15 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C6F92691FA906B500C82C97;
 					};
+					0CFC10B91FAA47CD00FDB427 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					0CFC10C11FAA47CE00FDB427 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C6F92691FA906B500C82C97;
+					};
 				};
 			};
 			buildConfigurationList = 0C6F92651FA906B500C82C97 /* Build configuration list for PBXProject "MVImage" */;
@@ -229,6 +435,8 @@
 				0C6F92691FA906B500C82C97 /* MVImage */,
 				0C6F92811FA906B500C82C97 /* MVImageTests */,
 				0C6F928C1FA906B500C82C97 /* MVImageUITests */,
+				0CFC10B91FAA47CD00FDB427 /* MVDownLoadManager */,
+				0CFC10C11FAA47CE00FDB427 /* MVDownLoadManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +466,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CFC10B81FAA47CD00FDB427 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CFC10C01FAA47CE00FDB427 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,9 +487,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C6F92721FA906B500C82C97 /* ViewController.m in Sources */,
+				0CD576711FAB962C00F82B52 /* MVCustomCollectionViewCell.m in Sources */,
+				0C55F9001FAC72CC00FF2F2B /* MVMovieModal.m in Sources */,
 				0C6F927D1FA906B500C82C97 /* main.m in Sources */,
 				0C6F926F1FA906B500C82C97 /* AppDelegate.m in Sources */,
+				0C55F9031FAC978300FF2F2B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +511,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CFC10B51FAA47CD00FDB427 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFC10ED1FAB035800FDB427 /* MVDownLoadOperationModel.m in Sources */,
+				0CFC10E81FAA56D000FDB427 /* MVDownLoadOperation.m in Sources */,
+				0CFC10DD1FAA4B8200FDB427 /* MVDownLoadManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CFC10BE1FAA47CE00FDB427 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CFC10CA1FAA47CE00FDB427 /* MVDownLoadManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +541,21 @@
 			isa = PBXTargetDependency;
 			target = 0C6F92691FA906B500C82C97 /* MVImage */;
 			targetProxy = 0C6F928E1FA906B500C82C97 /* PBXContainerItemProxy */;
+		};
+		0CFC10C51FAA47CE00FDB427 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CFC10B91FAA47CD00FDB427 /* MVDownLoadManager */;
+			targetProxy = 0CFC10C41FAA47CE00FDB427 /* PBXContainerItemProxy */;
+		};
+		0CFC10C71FAA47CE00FDB427 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C6F92691FA906B500C82C97 /* MVImage */;
+			targetProxy = 0CFC10C61FAA47CE00FDB427 /* PBXContainerItemProxy */;
+		};
+		0CFC10CE1FAA47CE00FDB427 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CFC10B91FAA47CD00FDB427 /* MVDownLoadManager */;
+			targetProxy = 0CFC10CD1FAA47CE00FDB427 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +690,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PM7352S8QE;
 				INFOPLIST_FILE = MVImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.videoRecorder.MVImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +705,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PM7352S8QE;
 				INFOPLIST_FILE = MVImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.videoRecorder.MVImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,6 +771,80 @@
 			};
 			name = Release;
 		};
+		0CFC10D11FAA47CE00FDB427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PM7352S8QE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MVDownLoadManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.videoRecorder.MVDownLoadManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0CFC10D21FAA47CE00FDB427 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PM7352S8QE;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MVDownLoadManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.videoRecorder.MVDownLoadManager;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0CFC10D31FAA47CE00FDB427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PM7352S8QE;
+				INFOPLIST_FILE = MVDownLoadManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.videoRecorder.MVDownLoadManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVImage.app/MVImage";
+			};
+			name = Debug;
+		};
+		0CFC10D41FAA47CE00FDB427 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PM7352S8QE;
+				INFOPLIST_FILE = MVDownLoadManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.videoRecorder.MVDownLoadManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVImage.app/MVImage";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +880,24 @@
 			buildConfigurations = (
 				0C6F929D1FA906B500C82C97 /* Debug */,
 				0C6F929E1FA906B500C82C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CFC10D51FAA47CE00FDB427 /* Build configuration list for PBXNativeTarget "MVDownLoadManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFC10D11FAA47CE00FDB427 /* Debug */,
+				0CFC10D21FAA47CE00FDB427 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CFC10D71FAA47CE00FDB427 /* Build configuration list for PBXNativeTarget "MVDownLoadManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CFC10D31FAA47CE00FDB427 /* Debug */,
+				0CFC10D41FAA47CE00FDB427 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
