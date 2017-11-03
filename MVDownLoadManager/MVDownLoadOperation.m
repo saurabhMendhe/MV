@@ -140,7 +140,6 @@
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error {
-    NSLog(@"Response : %@ %ld",task.originalRequest.URL,[receivedData length]);
     MVDownLoadOperationModel *operationModel = [operationDic objectForKey:task.originalRequest.URL];
     for (id<MVDownLoadManagerDelegate>delegate in operationModel.delegateQueues) {
         operationModel.requestCount--;
