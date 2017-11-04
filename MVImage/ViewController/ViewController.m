@@ -10,10 +10,11 @@
 #import "MVCustomCollectionViewCell.h"
 #import "MVMovieModal.h"
 #define DEFAULT_CELL_SIZE 10
-#define BASE_URL @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=batman&page="
+#define BASE_URL @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=Bond&page="
 @interface ViewController (){
     NSMutableArray *arrImageUrl;
     int pageNumber;
+    BOOL infiniteScroll;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewObj;
 
@@ -24,13 +25,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     pageNumber = 1;
+    infiniteScroll = NO;
     // Do any additional setup after loading the view, typically from a nib.
     arrImageUrl = [[NSMutableArray alloc]init];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%d",BASE_URL,pageNumber]];
     [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
-//    NSUserDefaults *use = [NSUserDefaults standardUserDefaults];
-//    NSString *key = [NSString stringWithFormat:@"data%d",pageNumber];
-//    [self downloadManagerDidComplete:[use objectForKey:key]];
+    self.collectionViewObj.backgroundColor = [UIColor lightGrayColor];
 }
 
 
@@ -45,14 +45,19 @@
 }
 
 -(void)downloadManagerDidComplete:(NSData *)respondeData{
-    pageNumber ++;
     NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:respondeData options:NSJSONReadingMutableContainers error:nil];
-    for (NSMutableDictionary *resultDic in [dic objectForKey:@"results"]) {
-         [arrImageUrl addObject:[self parseTheData:resultDic]];
+    NSArray *arrResults = [dic objectForKey:@"results"];
+    if (arrResults.count) {
+        pageNumber ++;
+        infiniteScroll = YES;
+        for (NSMutableDictionary *resultDic in arrResults) {
+            [arrImageUrl addObject:[self parseTheData:resultDic]];
+        }
+        if ([arrImageUrl count]) {
+            [self.collectionViewObj reloadData];
+        }
     }
-    if ([arrImageUrl count]) {
-        [self.collectionViewObj reloadData];
-    }
+    
 }
 -(void)downloadManagerDidFail:(NSError *)error{
     NSLog(@"Error : %@",error);
@@ -81,20 +86,20 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"Cell";
     MVCustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
-    cell.backgroundColor = [self randomColor];
+    cell.backgroundColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:@"movieIcon"];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     CGRect windowRect = [[UIScreen mainScreen] bounds];
     CGRect cellRect = cell.imageView.frame;
     CGSize size =  CGSizeMake((windowRect.size.width/2), (windowRect.size.width/2));
     cell.imageView.frame = CGRectMake(cellRect.origin.x, cellRect.origin.y, size.width, size.height);
+    cell.imageView.image = [UIImage imageNamed:@"movieIcon"];
     if ([arrImageUrl count]) {
         MVMovieModal *modal  = (MVMovieModal *)[arrImageUrl objectAtIndex:indexPath.row];
         NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://image.tmdb.org/t/p/w185/%@",modal.imageurl]];
         cell.title.text = modal.title;
         cell.ratings.text = [NSString stringWithFormat:@"Rating : %.1f",modal.ratings];
-        cell.releaseDate.text = modal.releaseDate;
+        cell.releaseDate.text = [NSString stringWithFormat:@"Release Date : %@",modal.releaseDate];
         cell.overview.text = modal.overview;
         cell.tag = indexPath.row+1;
         if (url) {
@@ -115,12 +120,10 @@
     if (scrollView_.contentSize.height>0) {
         CGFloat actualPosition = scrollView_.contentOffset.y;
         CGFloat contentHeight = scrollView_.contentSize.height - (3 * self.collectionViewObj.frame.size.height);
-        if (actualPosition >= contentHeight) {
-//            NSUserDefaults *use = [NSUserDefaults standardUserDefaults];
-//            NSString *key = [NSString stringWithFormat:@"data%d",pageNumber];
-//            [self downloadManagerDidComplete:[use objectForKey:key]];
+        if (actualPosition >= contentHeight && infiniteScroll) {
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%d",BASE_URL,pageNumber]];
             [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
+            infiniteScroll = NO;
         }
     }
 }
