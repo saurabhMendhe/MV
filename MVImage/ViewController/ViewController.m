@@ -10,7 +10,7 @@
 #import "MVCustomCollectionViewCell.h"
 #import "MVMovieModal.h"
 #define DEFAULT_CELL_SIZE 10
-#define BASE_URL @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=Bond&page="
+#define BASE_URL @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=Batman&page="
 @interface ViewController (){
     NSMutableArray *arrImageUrl;
     int pageNumber;
