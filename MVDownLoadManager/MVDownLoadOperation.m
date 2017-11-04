@@ -110,8 +110,10 @@
             operationModel.url = dataTask.originalRequest.URL;
             operationModel.requestCount = 1;
             operationModel.dataTask = dataTask;
-            operationModel.delegateQueues = [[NSMutableArray alloc]initWithObjects:delegate, nil];
-            [[self instance]->operationDic setObject:operationModel forKey:dataTask.originalRequest.URL];
+            if (delegate!=nil) {
+                operationModel.delegateQueues = [[NSMutableArray alloc]initWithObjects:delegate, nil];
+                [[self instance]->operationDic setObject:operationModel forKey:dataTask.originalRequest.URL];
+            }
             [dataTask resume];
         }
     }else{

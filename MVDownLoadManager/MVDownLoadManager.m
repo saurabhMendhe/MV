@@ -36,7 +36,7 @@
 }
 
 +(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache delegate:(id<MVDownLoadManagerDelegate>)delegate{
-    [MVDownLoadOperation startUrlRequest:url useCache:YES delegate:delegate];
+    [MVDownLoadOperation startUrlRequest:url useCache:useCache delegate:delegate];
 }
 
 +(void)cancelRequest:(NSURL *)url delegate:(id<MVDownLoadManagerDelegate>)delegate{
