@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SearchViewController : UIViewController
-
+#import "MovieViewController.h"
+@interface SearchViewController : UIViewController<MovieVCDelegate>
 @end

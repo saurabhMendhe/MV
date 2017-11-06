@@ -6,33 +6,40 @@
 //  Copyright © 2017 Saurabh Mendhe. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MovieViewController.h"
 #import "MVCustomCollectionViewCell.h"
 #import "MVMovieModal.h"
-#define DEFAULT_CELL_SIZE 10
-#define BASE_URL @"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=Batman&page="
-@interface ViewController (){
+#define DEFAULT_CELL_SIZE 0
+@interface MovieViewController (){
     NSMutableArray *arrImageUrl;
     int pageNumber;
     BOOL infiniteScroll;
+    NSString *baseUrl;
+    NSString *movieName;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewObj;
 
 @end
 
-@implementation ViewController
-
+@implementation MovieViewController
+@synthesize delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     pageNumber = 1;
     infiniteScroll = NO;
-    // Do any additional setup after loading the view, typically from a nib.
     arrImageUrl = [[NSMutableArray alloc]init];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%d",BASE_URL,pageNumber]];
+}
+
+-(void)setMovieName:(NSString *)_movieName{
+    self.navigationItem.title = [NSString stringWithFormat:@"Fetching %@ details..",_movieName];
+    movieName = _movieName;
+    pageNumber = 1;
+    _movieName = [_movieName stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    baseUrl = [NSString stringWithFormat:@"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=%@",_movieName];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&page=%d",baseUrl,pageNumber]];
     [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
     self.collectionViewObj.backgroundColor = [UIColor lightGrayColor];
 }
-
 
 -(MVMovieModal *)parseTheData:(NSDictionary *)resultDic{
     MVMovieModal *modal = [[MVMovieModal alloc] init];
@@ -48,6 +55,10 @@
     NSMutableDictionary *dic = [NSJSONSerialization JSONObjectWithData:respondeData options:NSJSONReadingMutableContainers error:nil];
     NSArray *arrResults = [dic objectForKey:@"results"];
     if (arrResults.count) {
+        if (pageNumber == 1) {
+            [self.delegate saveSearchItems:movieName];
+        }
+        self.navigationItem.title = [NSString stringWithFormat:@"%@",movieName];
         pageNumber ++;
         infiniteScroll = YES;
         for (NSMutableDictionary *resultDic in arrResults) {
@@ -56,11 +67,29 @@
         if ([arrImageUrl count]) {
             [self.collectionViewObj reloadData];
         }
+    }else{
+        NSDictionary *userInfo = @{
+                                   NSLocalizedDescriptionKey: NSLocalizedString(@"Movie name not found or cannot found more movie name", nil)
+                                   };
+        NSError *error = [NSError errorWithDomain:@"Movie Name"
+                                             code:1001
+                                         userInfo:userInfo];
+        [self downloadManagerDidFail:error];
     }
     
 }
 -(void)downloadManagerDidFail:(NSError *)error{
-    NSLog(@"Error : %@",error);
+    UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"Alert"
+                                                                  message:error.localizedDescription
+                                                           preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"Ok"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction * action)
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert addAction:yesButton];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,7 +150,7 @@
         CGFloat actualPosition = scrollView_.contentOffset.y;
         CGFloat contentHeight = scrollView_.contentSize.height - (3 * self.collectionViewObj.frame.size.height);
         if (actualPosition >= contentHeight && infiniteScroll) {
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%d",BASE_URL,pageNumber]];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&page=%d",baseUrl,pageNumber]];
             [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
             infiniteScroll = NO;
         }
