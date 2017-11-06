@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C55F9001FAC72CC00FF2F2B /* MVMovieModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F8FF1FAC72CC00FF2F2B /* MVMovieModal.m */; };
 		0C55F9031FAC978300FF2F2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C55F9011FAC978300FF2F2B /* ViewController.m */; };
+		0C659F231FB0653F00D48BA9 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C659F221FB0653F00D48BA9 /* SearchViewController.m */; };
 		0C6F926F1FA906B500C82C97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F926E1FA906B500C82C97 /* AppDelegate.m */; };
 		0C6F92751FA906B500C82C97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6F92731FA906B500C82C97 /* Main.storyboard */; };
 		0C6F92771FA906B500C82C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C6F92761FA906B500C82C97 /* Assets.xcassets */; };
@@ -89,6 +90,8 @@
 		0C55F8FF1FAC72CC00FF2F2B /* MVMovieModal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVMovieModal.m; sourceTree = "<group>"; };
 		0C55F9011FAC978300FF2F2B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0C55F9021FAC978300FF2F2B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0C659F211FB0653F00D48BA9 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		0C659F221FB0653F00D48BA9 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		0C6F926A1FA906B500C82C97 /* MVImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C6F926D1FA906B500C82C97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C6F926E1FA906B500C82C97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 			children = (
 				0C55F9021FAC978300FF2F2B /* ViewController.h */,
 				0C55F9011FAC978300FF2F2B /* ViewController.m */,
+				0C659F211FB0653F00D48BA9 /* SearchViewController.h */,
+				0C659F221FB0653F00D48BA9 /* SearchViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				0C55F9001FAC72CC00FF2F2B /* MVMovieModal.m in Sources */,
 				0C6F927D1FA906B500C82C97 /* main.m in Sources */,
 				0C6F926F1FA906B500C82C97 /* AppDelegate.m in Sources */,
+				0C659F231FB0653F00D48BA9 /* SearchViewController.m in Sources */,
 				0C55F9031FAC978300FF2F2B /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
