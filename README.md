@@ -16,15 +16,20 @@ MVDownLoadManager is a files download manager built on top of NSURLSession for i
 - Import #import <MVDownLoadManager/MVDownLoadManager.h>
 - To start the request use below snippet<br />
           NSURL *url = [NSURL URLWithString:@"https://github.com"];<br />
-          [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
-     
- - Use MVDownLoadManagerDelegate, which can be used to process file after finish downloading or to recieve any error if there is any failure.<br />
-    -(void)downloadManagerDidComplete:(NSData *)respondeData;<br />
-    -(void)downloadManagerDidFail:(NSError *)error;<br />
-    
+          NetworkCompletionBlock networkblock = ^(NSData *respondeData, NSError *error) {<br />
+          if (error == nil) {<br />
+          [self downloadManagerDidComplete:respondeData];<br />
+          }<br />
+          else{<br />
+          [self downloadManagerDidFail:error];<br />
+          }<br />
+          };<br />
+          [MVDownLoadManager startUrlRequest:url useCache:YES WithCompletionBlock:networkblock];
+ 
+
 - In order to cancel the ongoing request, use below snippet<br />
    NSURL *url = [NSURL URLWithString:@"https://github.com"];<br />
-   [MVDownLoadManager cancelRequest:url delegate:self];
+   [MVDownLoadManager cancelRequest:url WithCompletionBlock:networkblock];
    
  **Sample App**
 The framework is integrated in the sample App, which illustrate the use the MVDownLoadManager framework<br />
