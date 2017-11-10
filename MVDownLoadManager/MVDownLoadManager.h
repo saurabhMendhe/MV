@@ -7,20 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol MVDownLoadManagerDelegate
-@optional
--(void)downloadManagerDidComplete:(NSData *)respondeData;
--(void)downloadManagerDidFail:(NSError *)error;
-@end
 @interface MVDownLoadManager : NSObject
-{
-    id <MVDownLoadManagerDelegate> __weak delegate;
-}
-@property (nonatomic, weak) id <MVDownLoadManagerDelegate> delegate;
-
-+(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache delegate:(id<MVDownLoadManagerDelegate>)delegate;
-+(void)cancelRequest:(NSURL *)url delegate:(id<MVDownLoadManagerDelegate>)delegate;
-+(int) delegateCountForUrl:(NSURL *)url; // Future Scope
-+(BOOL) isDownloadingItemWithURL:(NSURL*)url; // Future Scope
+typedef void(^NetworkCompletionBlock)(NSData *respondeData, NSError *error);
++(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache WithCompletionBlock: (NetworkCompletionBlock)completionBlock;
++(void)cancelRequest:(NSURL *)url forCompletionBlock: (NetworkCompletionBlock)completionBlock;
 @end

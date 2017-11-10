@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MVDownLoadManager.h"
-@interface MVCustomCollectionViewCell : UICollectionViewCell<MVDownLoadManagerDelegate>
+@interface MVCustomCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *overview;
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *ratings;

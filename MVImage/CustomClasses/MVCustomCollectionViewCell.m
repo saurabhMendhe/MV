@@ -10,14 +10,14 @@
 
 @implementation MVCustomCollectionViewCell
 -(void)setImageWithUrl:(NSURL *)url{
-    [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
-}
--(void)downloadManagerDidComplete:(NSData *)respondeData{
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.imageView.image = [UIImage imageWithData:respondeData];
-}
--(void)downloadManagerDidFail:(NSError *)error{
-    
+    [MVDownLoadManager startUrlRequest:url useCache:YES WithCompletionBlock:^(NSData *respondeData, NSError *error) {
+        if (error == nil) {
+            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+            self.imageView.image = [UIImage imageWithData:respondeData];
+        }else{
+            
+        }
+    }];
 }
 
 -(void)resetCell{

@@ -21,7 +21,7 @@
         [copy setUrl:[self.url copyWithZone:zone]];
         [copy setRequestCount:self.requestCount];
         [copy setDataTask:[self.dataTask copyWithZone:zone]];
-        [copy setDelegateQueues:[self.delegateQueues copyWithZone:zone]];
+        [copy setCompletionQueues:[self.completionQueues copyWithZone:zone]];
     }
     return copy;
 }

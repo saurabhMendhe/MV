@@ -13,7 +13,6 @@
 }
 @end
 @implementation MVDownLoadManager
-@synthesize delegate;
 
 
 + (MVDownLoadManager*) instance
@@ -35,19 +34,12 @@
     return self;
 }
 
-+(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache delegate:(id<MVDownLoadManagerDelegate>)delegate{
-    [MVDownLoadOperation startUrlRequest:url useCache:useCache delegate:delegate];
++(void)startUrlRequest:(NSURL *)url useCache:(BOOL)useCache WithCompletionBlock: (NetworkCompletionBlock)completionBlock{
+    [MVDownLoadOperation startUrlRequest:url useCache:useCache WithCompletionBlock:completionBlock];
 }
 
-+(void)cancelRequest:(NSURL *)url delegate:(id<MVDownLoadManagerDelegate>)delegate{
-    [MVDownLoadOperation cancelRequest:url delegate:delegate];
++(void)cancelRequest:(NSURL *)url forCompletionBlock: (NetworkCompletionBlock)completionBlock{
+    [MVDownLoadOperation cancelRequest:url forCompletionBlock:completionBlock];
 }
-+ (int) delegateCountForUrl:(NSURL *)url{
-    return 0;
-}
-+ (BOOL) isDownloadingItemWithURL:(NSURL*)url{
-    return YES;
-}
-
 
 @end

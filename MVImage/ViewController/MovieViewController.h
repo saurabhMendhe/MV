@@ -11,7 +11,7 @@
 @protocol MovieVCDelegate
 -(void)saveSearchItems:(NSString *)movieName;
 @end
-@interface MovieViewController : UIViewController<MVDownLoadManagerDelegate>
+@interface MovieViewController : UIViewController
 {
     id <MovieVCDelegate> __weak delegate;
 }

@@ -37,7 +37,15 @@
     _movieName = [_movieName stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     baseUrl = [NSString stringWithFormat:@"http://api.themoviedb.org/3/search/movie?api_key=2696829a81b1b5827d515ff121700838&query=%@",_movieName];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&page=%d",baseUrl,pageNumber]];
-    [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
+    NetworkCompletionBlock networkblock = ^(NSData *respondeData, NSError *error) {
+        if (error == nil) {
+            [self downloadManagerDidComplete:respondeData];
+        }
+        else{
+            [self downloadManagerDidFail:error];
+        }
+    };
+    [MVDownLoadManager startUrlRequest:url useCache:YES WithCompletionBlock:networkblock];
     self.collectionViewObj.backgroundColor = [UIColor lightGrayColor];
 }
 
@@ -151,7 +159,14 @@
         CGFloat contentHeight = scrollView_.contentSize.height - (3 * self.collectionViewObj.frame.size.height);
         if (actualPosition >= contentHeight && infiniteScroll) {
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&page=%d",baseUrl,pageNumber]];
-            [MVDownLoadManager startUrlRequest:url useCache:YES delegate:self];
+            [MVDownLoadManager startUrlRequest:url useCache:YES WithCompletionBlock:^(NSData *respondeData, NSError *error) {
+                if (error == nil) {
+                    [self downloadManagerDidComplete:respondeData];
+                }
+                else{
+                    [self downloadManagerDidFail:error];
+                }
+            }];
             infiniteScroll = NO;
         }
     }

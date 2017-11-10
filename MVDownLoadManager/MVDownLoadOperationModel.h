@@ -12,5 +12,5 @@
 @property(nonatomic, strong)NSURL *url;
 @property(nonatomic, assign)int requestCount;
 @property(nonatomic, strong)NSURLSessionDataTask *dataTask;
-@property(nonatomic, strong)NSMutableArray *delegateQueues;
+@property(nonatomic, strong)NSMutableArray *completionQueues;
 @end
