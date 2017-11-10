@@ -120,10 +120,12 @@
     
     return [UIColor colorWithRed:aRedValue/255.0f green:aGreenValue/255.0f blue:aBlueValue/255.0f alpha:0.7f];
 }
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"Cell";
     MVCustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = nil;
     cell.imageView.image = [UIImage imageNamed:@"movieIcon"];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
     CGRect windowRect = [[UIScreen mainScreen] bounds];
